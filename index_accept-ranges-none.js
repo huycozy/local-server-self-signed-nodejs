@@ -52,7 +52,8 @@ http.createServer(function (request, response) {
         else {
             response.writeHead(200, { 
               'Content-Type': contentType, 
-              'Accept-Ranges': 'none'
+              'Accept-Ranges': 'bytes',
+              'Content-Length': Buffer.byteLength(content)
            });
 
             response.end(content, 'utf-8');

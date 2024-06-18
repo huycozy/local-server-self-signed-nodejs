@@ -12,7 +12,7 @@ const options = {
 
 const requestListener = function (req, res) {
     res.writeHead(200);
-    res.end("My first server!");
+    res.end("My server!");
 };
 
 const server = https.createServer(options, requestListener);
